@@ -1,0 +1,47 @@
+/* mystyle.css*/
+ul{
+    list-style-type: disc;
+    list-style: circle inside url('https://i.kym-cdn.com/photos/images/original/002/584/508/141.gif');
+}
+h1{
+    color: purple;
+}
+h1, .myh1{
+font-size: 36pt;
+margin: 30px;
+padding: 20px;
+border: 3px solid blueviolet;
+border-radius: 15%;
+text-align: center;
+background-image: url('https://i.kym-cdn.com/photos/images/original/002/584/508/141.gif');
+background-size: 110px;
+background-repeat: no-repeat;
+}
+h1:hover{
+    background-color: purple;
+    color: white;
+}
+
+body{
+    font-family: 'kanit';
+}
+
+input[type="submit"]:hover,input[type="reset"]:hover {
+    background-color: purple;
+    color: white;
+}
+input[type = "fname"]:hover{
+    background-color: blueviolet;
+}
+img {
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+    border-radius: 100%;
+    
+}
+body {
+    background-color: rgb(232, 201, 235); 
+}
+
+

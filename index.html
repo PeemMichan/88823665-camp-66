@@ -3,11 +3,27 @@
     <head>
         <title>Page Title</title>
         <meta charset="UTF-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="mystyle.css"/>
+
+        <style>
+          
+          input:focus, textarea:focus {
+              border: 2px solid purple; 
+              background-color: #cef3f4; 
+          }
+  
+      </style>
+       
     </head>
+  
     <body>
-        <h1>Workshop#HTML-FORM</h1>
-        <table>
-          <form>
+        <h1 class="h1.mystyle">Workshop#HTML-FORM</h1>
+        <form>
+          <table>
+          
             <tr>
               <td><label for="fname">ชื่อ</label></td>
               <td><input type="text" id="fname" name="fname"></td>
@@ -82,9 +98,14 @@
             <tr>
               <td><br><input type="reset"></td>
               <td><br><input type="submit"></td>
+            </tr>  
+
+            <tr>
+              <td colspan="3" style="text-align: center;">
+              <img src="https://i.kym-cdn.com/photos/images/original/002/584/508/141.gif" style="width: 150px; height: 120pt;">
+              </td>
             </tr>
-          </form>
-          </table>
-    
+          </table>         
+    </form>
     </body>
 </html>
