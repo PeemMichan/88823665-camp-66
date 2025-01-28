@@ -10,8 +10,8 @@ class MyController extends Controller
         return 1;
     }
     function myfunction(Request $req , $var1=""){
-        $data['myinput'] = $req->input('myinput', ''); // อ่านค่า myinput จากฟอร์ม
-        $data['myvalue'] = ""; 
+        $data['myinput'] = $req->input('myinput', '');
+        $data['myvalue'] = "";
         $data['multiplicationTable'] = [];
 
         // ตรวจสอบ $var1 หากไม่ว่าง
