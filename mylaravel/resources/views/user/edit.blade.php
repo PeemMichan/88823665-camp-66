@@ -9,20 +9,20 @@
     <div class="card">
       <div class="card-body register-card-body">
         <p class="register-box-msg">Edit User</p>
-        <form action="{{ url('/user') }}" method="post">
+        <form action="{{ url('/user') }}" method="post" id="editForm">
             @csrf
             @method('put')
-            <input type="hidden" name="id"
-            value="{{ $user->id}}" >
+            <input type="hidden" name="id" value="{{ $user->id }}">
           <div class="input-group mb-3">
-            <input type="text" value="{{ $user->name}}" name="name" class="form-control" placeholder="Full Name">
+            <input type="text" value="{{ $user->name }}" name="name" class="form-control" placeholder="Full Name">
             <div class="input-group-text"><span class="bi bi-person"></span></div>
           </div>
           <div class="input-group mb-3">
-            <input type="email" value="{{$user->email}}" name="email" class="form-control" placeholder="Email">
+            <input type="email" value="{{ $user->email }}" name="email" class="form-control" placeholder="Email">
             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
           </div>
-          <div class="input-group mb-3">
+
+          {{-- <div class="input-group mb-3">
             <input type="password" name="password" class="form-control" placeholder="Password">
             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
           </div>
@@ -35,11 +35,12 @@
                   I agree to the <a href="#">terms</a>
                 </label>
               </div>
-            </div>
+            </div> --}}
+
             <!-- /.col -->
             <div class="col-4">
               <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Sign In</button>
+                <button type="submit" class="btn btn-primary" onclick="showSuccessMessage(event)">Sign In</button>
               </div>
             </div>
             <!-- /.col -->
@@ -51,4 +52,24 @@
       <!-- /.register-card-body -->
     </div>
   </div>
+@endsection
+
+@section('scripts')
+    <script>
+        // แสดง Success message เมื่อกด Sign In
+        function showSuccessMessage(event) {
+            event.preventDefault(); // ป้องกันการส่ง form ทันที
+
+            // โชว์ SweetAlert Success
+            Swal.fire({
+                icon: 'success',
+                title: 'User updated successfully!',
+                showConfirmButton: false,
+                timer: 1500
+            }).then(() => {
+                // ส่งฟอร์มหลังจากแสดงข้อความ Success
+                document.getElementById('editForm').submit();
+            });
+        }
+    </script>
 @endsection

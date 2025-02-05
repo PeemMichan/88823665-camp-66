@@ -33,7 +33,7 @@ Route::get('/user/{id}',
 Route::put('/user',
 [UserController::class, 'edit_action']);
 
-Route::delete('user',
+Route::delete('/user',
 [UserController::class, 'delete']);
 
 Route::get('/404', function(){
