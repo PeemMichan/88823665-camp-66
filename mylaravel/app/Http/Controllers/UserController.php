@@ -7,10 +7,13 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-function index(){
-    $users = User::all();
-    return view('user.index',['users'=>$users]);
-}
+    function index(){
+        $users = User::all();
+        return view('user.index',['users'=>$users]);
+    }
+    function login(Request $req){
+
+    }
     function edit($id){
         $user = user::find($id);
         $data['user'] = $user;
